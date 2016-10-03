@@ -110,7 +110,7 @@ function reactNativePlugin(Raven, options) {
         };
         var error = arguments[0];
         // We want to handle fatals, but only in production mode.
-        var shouldHandleFatal = isFatal && !global.__DEV__;
+        var shouldHandleFatal = isFatal && !__DEV__;
         if (shouldHandleFatal) {
             if (handlingFatal) {
                 console.log('Encountered multiple fatals in a row. The latest:', error);
